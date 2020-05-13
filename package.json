@@ -1,0 +1,27 @@
+{
+  "name": "recipe_app",
+  "version": "1.0.0",
+  "description": "ES6, Bable, Webpack",
+  "main": "index.js",
+  "scripts": {
+    "webpack": "webpack --mode development",
+    "webpack:build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deankim1118/Recipe_App.git"
+  },
+  "author": "dean kim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deankim1118/Recipe_App/issues"
+  },
+  "homepage": "https://github.com/deankim1118/Recipe_App#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^4.3.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
