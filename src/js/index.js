@@ -33,3 +33,12 @@ const controlSearch = async (e) => {
 };
 
 elements.searchForm.addEventListener('submit', controlSearch);
+
+elements.searchResPages.addEventListener('click', (e) => {
+  const btn = e.target.closest('.btn-inline');
+  if (btn) {
+    const goToPage = parseInt(btn.dataset.goto, 10);
+    searchView.clearResult();
+    searchView.rederResults(state.search.result, goToPage);
+  }
+});
