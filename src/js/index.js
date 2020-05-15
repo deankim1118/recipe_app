@@ -3,6 +3,7 @@ import Recipe from './models/Recipe';
 import { elements, renderLoader, clearLoader } from './views/base';
 import * as searchView from './views/searchView';
 import * as recipeView from './views/recipeView';
+import List from './models/List';
 
 /** Global state of the app
  * - Search object
@@ -20,7 +21,7 @@ const controlSearch = async (e) => {
   //1. Get query from the view
 
   // const query = searchView.getInput();
-  // For Test
+  //For Test
   const query = 'pizza';
 
   if (query) {
@@ -69,7 +70,7 @@ const controlRecipe = async () => {
     recipeView.clearRecipe();
     renderLoader(elements.recipe);
     // Highlight Selected search item
-    searchView.highlightSelected(id);
+    //searchView.highlightSelected(id);
     // Create new Recipe constructor
     state.recipe = new Recipe(id);
 
@@ -107,3 +108,5 @@ elements.recipe.addEventListener('click', (event) => {
     recipeView.updateServingsIngredients(state.recipe);
   }
 });
+
+window.l = new List();
