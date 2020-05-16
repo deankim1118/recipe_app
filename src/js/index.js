@@ -15,7 +15,6 @@ import * as likesView from './views/likesView';
  * - Liked recipes
  */
 const state = {};
-window.state = state;
 
 /**
  * SEARCH CONTROLLER
@@ -24,9 +23,7 @@ const controlSearch = async (e) => {
   e.preventDefault();
   //1. Get query from the view
 
-  // const query = searchView.getInput();
-  //For Test
-  const query = 'pizza';
+  const query = searchView.getInput();
 
   if (query) {
     //2. New search object and add to state
@@ -50,8 +47,6 @@ const controlSearch = async (e) => {
 };
 
 elements.searchForm.addEventListener('submit', controlSearch);
-//For Test
-window.addEventListener('load', controlSearch);
 
 elements.searchResPages.addEventListener('click', (e) => {
   const btn = e.target.closest('.btn-inline');
